@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SmartBagTracker</string>
+
+    <string name="logout">Logout</string>
+    <string name="click_to_register">click to register</string>
+    <string name="click_to_login">click to login</string>
+    <string name="title_activity_navbar">Navbar</string>
+
+
+</resources>
