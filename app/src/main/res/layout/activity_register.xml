@@ -1,54 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".Register">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400px"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:text="Welcome"
-        android:textColor="@color/dark_blue"
         android:textSize="28sp"
         android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        android:layout_marginTop="50dp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600px"
-        android:layout_marginLeft="130px"
-        android:text="EMail"
-        />
+        android:text="Email"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="50px"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="570px"
-        android:layout_marginLeft="350px"
         android:hint="Enter your email"
+        android:textColorHint="@color/primary_blue"
+        android:textColor="@color/text_color"
+        android:background="@drawable/edittext_border"
+        android:padding="12dp"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/txtNewEmail"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="750px"
-        android:layout_marginLeft="130px"
         android:text="Password"
-        />
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="16dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="700px"
-        android:layout_marginLeft="350px"
         android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/primary_blue"
+        android:textColor="@color/text_color"
+        android:background="@drawable/edittext_border"
+        android:padding="12dp"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/txtNewPassword"
         />
 
@@ -63,24 +76,25 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="950px"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
         android:id="@+id/btnRegister"
         android:text="Register"
         android:onClick="clickRegisButton"
         />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/primary_blue"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginTop="1150px"
+        android:layout_marginTop="16dp"
         android:id="@+id/loginNow"
         android:text="@string/click_to_login"
         android:onClick="goLogin"
-        android:textColor="@color/primary_blue"
     />
 
-</RelativeLayout>
+</LinearLayout>

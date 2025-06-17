@@ -20,7 +20,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Register"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Login"
