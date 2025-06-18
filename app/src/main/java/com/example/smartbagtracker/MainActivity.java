@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,7 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView textView;
     FirebaseUser user;
+    private BottomNavigationView bottomNavigationView;
+    private FrameLayout frameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,5 +63,38 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        // Navigation bar setup
+        bottomNavigationView = findViewById(R.id.bottomNavbar);
+        frameLayout = findViewById(R.id.frameLayout);
+
+        bottomNavigationView.setSelectedItemId(R.id.navHome);
+        loadFragment(new HomeFragment(), false);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.navHome) {
+                loadFragment(new HomeFragment(), false);
+            } else if (itemId == R.id.navSearch) {
+                loadFragment(new BookFragment(), false);
+            } else if (itemId == R.id.navNotification) {
+                loadFragment(new NotificationFragment(), false);
+            } else { // nav settings
+                loadFragment(new SettingsFragment(), false);
+            }
+            return true;
+        });
     }
+
+    private void loadFragment(Fragment fragment, boolean isAppInitialized) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if (isAppInitialized) {
+            fragmentTransaction.add(R.id.frameLayout, fragment);
+        } else {
+            fragmentTransaction.replace(R.id.frameLayout, fragment);
+        }
+        fragmentTransaction.commit();
+    }
+
 }

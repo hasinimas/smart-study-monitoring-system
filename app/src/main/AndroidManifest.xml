@@ -13,11 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Navbar"
-            android:exported="false"
-            android:label="@string/title_activity_navbar"
-            android:theme="@style/AppTheme" />
+
         <activity
             android:name=".Register"
             android:exported="true"
