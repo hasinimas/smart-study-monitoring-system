@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.navSearch) {
                 loadFragment(new BookFragment(), false);
             } else if (itemId == R.id.navNotification) {
-                loadFragment(new NotificationFragment(), false);
+                loadFragment(new NotificationsFragment(), false);
             } else { // nav settings
                 loadFragment(new SettingsFragment(), false);
             }
