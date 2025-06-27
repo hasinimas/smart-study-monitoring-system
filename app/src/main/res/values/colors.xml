@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_background">#EEF1FF</color> <!-- Lightest blue for background -->
+    <!-- Blue Theme from Palette -->
+    <color name="primary_blue">#AAC4FF</color> <!-- Primary blue for buttons, accents -->
+    <color name="dark_blue">#B1B2FF</color> <!-- Slightly darker blue for pressed states or outlines -->
+    <color name="accent_blue">#D2DAFF</color> <!-- Subtle blue for secondary accents -->
+    <color name="text_color">#212121</color> <!-- Dark text for contrast -->
+    <color name="text_hint_color">#757575</color> <!-- Gray for hints -->
+</resources>

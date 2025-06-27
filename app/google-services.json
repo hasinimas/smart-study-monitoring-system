@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "541261131191",
+    "project_id": "smartbagtracker-bef75",
+    "storage_bucket": "smartbagtracker-bef75.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541261131191:android:48b8846e7c29dc3ac44c32",
+        "android_client_info": {
+          "package_name": "com.example.smartbagtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6tgxfO8GzV7-whGFHPdJIBwY2JXdhiiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
