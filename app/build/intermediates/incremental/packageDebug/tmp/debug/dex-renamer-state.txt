@@ -1,8 +1,8 @@
-#Fri Jun 27 12:24:36 IST 2025
-base.0=C\:\\Users\\MSii\\Downloads\\New folder\\clone\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\MSii\\Downloads\\New folder\\clone\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\MSii\\Downloads\\New folder\\clone\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.3=C\:\\Users\\MSii\\Downloads\\New folder\\clone\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Sat Jun 28 10:11:26 IST 2025
+base.0=C\:\\Users\\User\\AndroidStudioProjects\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\User\\AndroidStudioProjects\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\User\\AndroidStudioProjects\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.3=C\:\\Users\\User\\AndroidStudioProjects\\smart-study-monitoring-system\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=15/classes.dex

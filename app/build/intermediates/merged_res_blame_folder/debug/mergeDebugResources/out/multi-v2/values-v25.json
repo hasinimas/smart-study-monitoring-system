@@ -4,7 +4,7 @@
             "outputFile": "com.example.smartbagtracker.app-mergeDebugResources-39:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MSii\\.gradle\\caches\\8.11.1\\transforms\\1965a29d7112ca0239f41e19913bef04\\transformed\\appcompat-1.7.1\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.11.1\\transforms\\1965a29d7112ca0239f41e19913bef04\\transformed\\appcompat-1.7.1\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

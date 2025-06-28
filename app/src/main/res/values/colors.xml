@@ -7,6 +7,8 @@
     <color name="primary_blue">#AAC4FF</color> <!-- Primary blue for buttons, accents -->
     <color name="dark_blue">#B1B2FF</color> <!-- Slightly darker blue for pressed states or outlines -->
     <color name="accent_blue">#D2DAFF</color> <!-- Subtle blue for secondary accents -->
+    <color name="button_primary">#FF6A4C93</color>
     <color name="text_color">#212121</color> <!-- Dark text for contrast -->
     <color name="text_hint_color">#757575</color> <!-- Gray for hints -->
+    <color name="text_primary">#FF2C2C2C</color>
 </resources>
