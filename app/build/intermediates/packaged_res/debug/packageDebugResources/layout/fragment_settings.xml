@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
@@ -8,170 +7,113 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:spacing="8dp">
+        android:orientation="vertical">
 
-        <!-- WiFi & Bluetooth Section -->
-        <androidx.cardview.widget.CardView
+        <!-- WiFi Setting -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardCornerRadius="12dp"
-            android:layout_marginBottom="12dp"
-            card_view:cardElevation="4dp">
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
 
-            <LinearLayout
-                android:padding="16dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <TextView
+                android:text="WiFi Connection"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Connectivity Settings"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp" />
+            <TextView
+                android:text="Connect to WiFi network"
+                android:textSize="14sp"
+                android:textColor="#777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <Switch
-                    android:id="@+id/switch_wifi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Enable WiFi" />
+            <Switch
+                android:id="@+id/switch_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable WiFi"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
 
-                <Switch
-                    android:id="@+id/switch_bluetooth"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Enable Bluetooth"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Study Duration -->
-        <androidx.cardview.widget.CardView
+        <!-- Bluetooth Setting -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardCornerRadius="12dp"
-            android:layout_marginBottom="12dp"
-            card_view:cardElevation="4dp">
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
 
-            <LinearLayout
-                android:padding="16dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <TextView
+                android:text="Bluetooth Connection"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Study Duration"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp" />
+            <TextView
+                android:text="Connect to Bluetooth devices"
+                android:textSize="14sp"
+                android:textColor="#777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <SeekBar
-                    android:id="@+id/seek_study_duration"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+            <Switch
+                android:id="@+id/switch_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable Bluetooth"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_duration_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1.5 hours"
-                    android:textSize="16sp"
-                    android:paddingTop="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Notification Settings -->
-        <androidx.cardview.widget.CardView
+        <!-- Study Duration Slider -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardCornerRadius="12dp"
-            android:layout_marginBottom="12dp"
-            card_view:cardElevation="4dp">
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:padding="16dp"
-                android:orientation="vertical"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Study Session Duration"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set maximum study time before break"
+                android:textColor="#777"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seek_study_duration"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="120" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Notification Settings"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp" />
-
-                <Switch
-                    android:id="@+id/switch_push"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Push Notifications" />
-
-                <Switch
-                    android:id="@+id/switch_lcd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="LCD Display Alerts"
-                    android:layout_marginTop="8dp" />
-
-                <Switch
-                    android:id="@+id/switch_env"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Environmental Alerts"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Gamification Section -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            card_view:cardCornerRadius="12dp"
-            card_view:cardElevation="4dp"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout
-                android:padding="16dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gamification &amp; Rewards"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp" />
-
-                <Switch
-                    android:id="@+id/switch_gamification"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Enable Gamification" />
-
-                <Button
-                    android:id="@+id/button_view_progress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="View Progress"
-                    android:layout_marginTop="12dp" />
-
-                <Button
-                    android:id="@+id/button_reset_progress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Reset Progress"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/text_duration_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1.5 hours"
+                android:textSize="14sp" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
