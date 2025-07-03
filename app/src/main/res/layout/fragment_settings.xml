@@ -115,5 +115,99 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@android:color/white"
+         android:elevation="4dp"
+         android:orientation="vertical"
+         android:padding="16dp"
+         android:layout_marginBottom="16dp">
+
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Control how alerts are delivered"
+            android:textSize="14sp"
+            android:textColor="#777"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Push Notifications Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Push Notifications (Break, Sleep, Study)"
+                android:textSize="14sp" />
+
+            <Switch
+                android:id="@+id/switch_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- LCD Display Alerts Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LCD Display Alerts"
+                android:textSize="14sp" />
+
+            <Switch
+                android:id="@+id/switch_lcd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Environmental Alerts Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Environmental Alerts (Temperature, Humidity)"
+                android:textSize="14sp" />
+
+            <Switch
+                android:id="@+id/switch_env"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+     </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>
