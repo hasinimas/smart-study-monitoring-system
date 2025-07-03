@@ -17,7 +17,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.navSearch) {
                 loadFragment(new BookFragment(), false);
             } else if (itemId == R.id.navNotification) {
-                loadFragment(new NotificationsFragment(), false);
+                loadFragment(new TimeTableFragment(), false);
             } else { // nav settings
                 loadFragment(new SettingsFragment(), false);
             }
