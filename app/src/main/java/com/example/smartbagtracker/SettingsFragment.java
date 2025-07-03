@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 public class SettingsFragment extends Fragment {
 
-    private Switch wifiSwitch, bluetoothSwitch;
+    private Switch wifiSwitch, bluetoothSwitch, switchPush, switchLCD, switchEnv;
     private SeekBar studyDurationSeekBar;
     private TextView durationText;
 
@@ -27,6 +27,10 @@ public class SettingsFragment extends Fragment {
         bluetoothSwitch = view.findViewById(R.id.switch_bluetooth);
         studyDurationSeekBar = view.findViewById(R.id.seek_study_duration);
         durationText = view.findViewById(R.id.text_duration_value);
+
+        switchPush = view.findViewById(R.id.switch_push);
+        switchLCD = view.findViewById(R.id.switch_lcd);
+        switchEnv = view.findViewById(R.id.switch_env);
 
         // --- WiFi switch action ---
         wifiSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -52,6 +56,18 @@ public class SettingsFragment extends Fragment {
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
 
             @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
+        switchPush.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Toast.makeText(getContext(), "Push Notifications: " + (isChecked ? "On" : "Off"), Toast.LENGTH_SHORT).show();
+        });
+
+        switchLCD.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Toast.makeText(getContext(), "LCD Display: " + (isChecked ? "On" : "Off"), Toast.LENGTH_SHORT).show();
+        });
+
+        switchEnv.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Toast.makeText(getContext(), "Environmental Alerts: " + (isChecked ? "On" : "Off"), Toast.LENGTH_SHORT).show();
         });
 
         return view;

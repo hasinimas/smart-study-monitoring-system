@@ -14,7 +14,7 @@
         />
 
     <item
-        android:title="Notification"
+        android:title="Time Table"
         android:id="@+id/navNotification"
         android:icon="@drawable/notification"
 
