@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,8 @@ import com.google.firebase.database.*;
 
 public class HomeFragment extends Fragment {
 
+    private LinearLayout highTempAlert;
+    private TextView highTempMessage, alertBadge;
     private TextView temperatureTextView, humidityTextView;
 
     @Override
@@ -37,6 +40,10 @@ public class HomeFragment extends Fragment {
         DatabaseReference tempRef = FirebaseDatabase.getInstance().getReference("sensor/temperature");
         DatabaseReference humidityRef = FirebaseDatabase.getInstance().getReference("sensor/humidity");
 
+        highTempAlert = view.findViewById(R.id.highTempAlert);
+        highTempMessage = view.findViewById(R.id.highTempMessage);
+        alertBadge = view.findViewById(R.id.alert_badge);
+
         // to Read Temperature from Firebase
         tempRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,8 +51,24 @@ public class HomeFragment extends Fragment {
                 Float temp = snapshot.getValue(Float.class);
                 if (temp != null) {
                     temperatureTextView.setText(String.format("%.1f°C", temp));
+
+                    if (temp >= 30.0) {
+                        // Show the colored alert banner
+                        highTempAlert.setVisibility(View.VISIBLE);
+                        highTempMessage.setText("High Temperature! Drink some water.");
+
+                        // Show/update the alert badge
+                        alertBadge.setText("1");
+                        alertBadge.setVisibility(View.VISIBLE);
+                    } else {
+                        // Hide the alert banner and badge
+                        highTempAlert.setVisibility(View.GONE);
+                        alertBadge.setVisibility(View.GONE);
+                    }
                 } else {
                     temperatureTextView.setText("--°C");
+                    highTempAlert.setVisibility(View.GONE);
+                    alertBadge.setVisibility(View.GONE);
                 }
             }
 
@@ -72,6 +95,7 @@ public class HomeFragment extends Fragment {
                 Log.w("Firebase", "Error reading humidity", error.toException());
             }
         });
+
 
 
         return view;
