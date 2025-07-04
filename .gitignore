@@ -1,5 +1,48 @@
+# Android Studio
 *.iml
 .gradle/
 local.properties
 /.idea/
+.DS_Store
+/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
 
+# OS-specific
+*.log
+*.tmp
+*.swp
+
+# Keystore files (if any)
+*.jks
+*.keystore
+
+# Generated files
+build/
+app/build/
+**/build/
+
+# Crashlytics and Firebase
+crashlytics-build.properties
+fabric.properties
+
+# macOS
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Node (if used with React Native or backend)
+node_modules/
+
+# Jetpack Compose preview cache
+.idea/.cache/
+
+# Kotlin
+*.kotlin_module
+
+# Misc
+*.orig
