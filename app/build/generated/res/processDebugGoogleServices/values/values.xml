@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">541261131191</string>
-    <string name="google_api_key" translatable="false">AIzaSyD6tgxfO8GzV7-whGFHPdJIBwY2JXdhiiI</string>
-    <string name="google_app_id" translatable="false">1:541261131191:android:48b8846e7c29dc3ac44c32</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD6tgxfO8GzV7-whGFHPdJIBwY2JXdhiiI</string>
-    <string name="google_storage_bucket" translatable="false">smartbagtracker-bef75.firebasestorage.app</string>
-    <string name="project_id" translatable="false">smartbagtracker-bef75</string>
-</resources>
