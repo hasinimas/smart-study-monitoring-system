@@ -164,24 +164,25 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@android:drawable/ic_menu_compass"
-                            android:tint="@color/white"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_temp"
                             android:contentDescription="Temp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="26°C"
+                            android:id="@+id/temperatureTextView"
+                            android:text="           "
                             android:textStyle="bold"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_marginStart="4dp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="  Adjust"
+                            android:text="  Temprature"
                             android:textColor="#E0E0E0"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:layout_marginStart="4dp" />
                     </LinearLayout>
 
@@ -193,24 +194,25 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@android:drawable/ic_menu_gallery"
-                            android:tint="@color/white"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/humidity"
                             android:contentDescription="Humidity" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="65%"
+                            android:text="           "
+                            android:id="@+id/humidityTextView"
                             android:textStyle="bold"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_marginStart="4dp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="  Adjust"
+                            android:text="  Humidity"
                             android:textColor="#E0E0E0"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:layout_marginStart="4dp" />
                     </LinearLayout>
                 </LinearLayout>

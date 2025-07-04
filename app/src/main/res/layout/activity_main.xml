@@ -11,20 +11,20 @@
 
 
     <TextView
+        android:id="@+id/userDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
         android:layout_gravity="center"
-        android:text="Password"
-        android:id="@+id/userDetails"
-        />
+
+        android:layout_marginTop="55dp"
+        android:text="user" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="-55dp"
-        android:text="X"
+        android:text="Logout"
         android:id="@+id/logout"
         />
 
@@ -43,8 +43,6 @@
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled"
         />
-
-
 
 
 </LinearLayout>
